@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "ds-tech-402606",
+    "private_key_id": "e89e06e3f36ed84b9ac86b232533d6aba429dae6",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPkdYLYp9evBcn\nhaeXB4/bHC87bTCCuCaFNFUmt1RmFL0rPBSZPlt1WXkc+9L+DBjpeZ6rsdlyLiiw\n4hSGrW7fZfqnG7Pj76dwOut6HdI8YlB0skejXsVunYxVB6fT1c0czFyQ0Cc8nD++\neDZ1WnAEG2GMAbiJfRpSoHzp6pFTOwU/aO0GwW/YFe+V3kMkeefeTtn283B43vEE\nvpoGXtOm9uGvoSRBxmy3qZW23ioW+RjUjoeoIlYP6y3CUFswbaXalaiB0Qud1+oV\nxNja+bQ9M0sCUDgdxo8M6CVU1jHTloEjMR4/YjYQtw8hgTqP1C//6iAo2GNPVMYC\n+q5jO4vlAgMBAAECggEABkt6bcr2YVWb8Cdl/zcL/k2bAxbbH0O9a1G8eVma9iOP\n3xVJ3KHe/S6S9TWP3wN35/C3xqY0nXlX45FfpPvyflTl5pZ4/KMidU1cIc5wt0MW\nBIv5jzNLEoE1pch/JvX3a/Woov2lCvoEFt8na6Sr+/vml+vfcE/6ceILF7703EzC\nbjoUYb0OMV/2iXoC56iz+4U1HqtYsZUm4u2ArcWRByTGerskWo9W2ibSLYY+0Arm\n+2ILfe1mkiABdjK5weGYplahcvXGoKNLX+Ko+ripUiXD3hLUUhFcWYqC5GOIY2D7\ntdQpsjiOkQuc4MF4op7gSh1+tUWAm5JbmZhwxY+tCwKBgQDr4Tm55aujbl2RyylQ\nT1V/vXgZ713kN6O13B2U+OLbDKA8Q5r1pF/YJBnG41rAXjDbfKuoGVweyJ+siUh4\nN7iuOVnIKGP6Bc5/ZIz35ET9zCV20xESQdkuZYdDNEmOgSF9f5d380MFXLVIuWFP\nhhFs1vRhJdlsj2JW5iLXlBrmnwKBgQDhRmsk++7YA6+/bw5KRO5a1SQ1Uo2UYO/y\n0w1lPBSAh47rCk9VGf6lYvrd6pROszdEMpf9QDeQiX2pxSWEerCl+dDNZz5dmZeu\nKbX/DhDeAmZAZsz50i3a5wap+yQkM/Jk+bkCql/gs7npZOyJ+MHO0WZ5KkEe7Wts\nm2OLljPS+wKBgFmOD06nBj1sf5YE3lChbkKretfN64XkIgG/6nNO80JbTtLSkBjH\nKaR0QF0koKX8nOwYL0wJJNKDNSxaiusprLJpD89QlnSsk7QGRwcu4YrCYU7137tg\nyMY2wd4gEfVKzZ5KPQXLlByLEEDmMS3yJtd93RatOhlfbuSzR3M1xejdAoGBAK4d\n3WaCisLPZqFR1vu0d34hS5EjM2bB3fQTCEF8xGPrYp1sJJEkPFvcOwYW73Y8srS1\nXiBR6CCBBG2ZgTv6EFrY0XhRGjUCJ+hnONHgL01JEXspebiFqQeOlOoAwJhyxiEh\nmsvin6RvhXxNkz241SNjWg7AiAC9hNA28iPLflbNAoGAWHvudfyxbNwqDAoxF7v/\nVsIerWnrzAoh1hhhDd3jnjPN4gJKb/+rjzExxyf4yRd9Y+3RaNkY+S/7TA7SUBpI\n7Vro+yzEqp0cEHFobSBmwjdDu0x42msRQeGgzXgWPAG2p4Go0vAkVqVDnZCWRpoi\nv+jfigSdgdqjlzoc2L5W26k=\n-----END PRIVATE KEY-----\n",
+    "client_email": "vision-vertex-ds@ds-tech-402606.iam.gserviceaccount.com",
+    "client_id": "108572140889991036542",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vision-vertex-ds%40ds-tech-402606.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
