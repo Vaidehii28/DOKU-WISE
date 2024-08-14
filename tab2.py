@@ -220,12 +220,14 @@ def display():
     uploaded_files = st.sidebar.file_uploader("Choose Image or PDF files", type=["jpg", "jpeg", "png", "pdf"], accept_multiple_files=True)
 
     args = {
+        'east_model_url': 'https://drive.google.com/uc?export=download&id=1pnkMiGjwyFDJmchGXpuvn7AO2-nL0PtQ',
         'east_model_path': 'frozen_east_text_detection.pb',
         'width': 320,
         'height': 320,
         'confidence_threshold': 0.5,
-        'margin_tolerance': 9
+        'margin_tolerance': 10
     }
+
 
     if st.sidebar.button('Submit'):
         if uploaded_files:
