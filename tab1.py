@@ -17,13 +17,37 @@ import plotly.express as px # type: ignore
 import pandas as pd
 from utilities.functions import extract_text_from_image, generate_predictions_for_14, parse_extracted_fields, get_language_name
 from utilities.config import client
+import gdown
+import zipfile
+
+
+def download_and_extract_model():
+    # Google Drive link for the zipped folder (replace with your actual zip file link)
+    url = "https://drive.google.com/uc?id=1AwrHyDVGxTAf7g9IE5JRoXaM_IdkOIoX"
+    output = "t5_model.zip"
+    
+    # Check if the model folder already exists, otherwise download and extract it
+    if not os.path.exists("t5_small-LATEST-CHANGES-400"):
+        print("Downloading T5 model folder as zip...")
+        gdown.download(url, output, quiet=False)
+        
+        # Extract the zip file
+        with zipfile.ZipFile(output, 'r') as zip_ref:
+            zip_ref.extractall(".")
+        
+        print("Model extracted.")
+    else:
+        print("Model folder already exists.")
+    
+    return "t5_small-LATEST-CHANGES-400"
 
 # Initialize models and tokenizers
 bert_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 bert_model = BertModel.from_pretrained('bert-base-uncased')
 
-t5_tokenizer = T5Tokenizer.from_pretrained('t5_small-LATEST-CHANGES-400')
-t5_model = T5ForConditionalGeneration.from_pretrained('t5_small-LATEST-CHANGES-400')
+model_folder_path = download_and_extract_model()
+t5_tokenizer = T5Tokenizer.from_pretrained(model_folder_path)
+t5_model = T5ForConditionalGeneration.from_pretrained(model_folder_path)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 t5_model.to(device)
 
@@ -50,8 +74,20 @@ class MultimodalClassifier(nn.Module):
         combined_output = torch.cat((text_output, image_output.flatten(1)), dim=1)
         return self.fc(combined_output)
 
-# Load multimodal model
-model_path = "multimodal_model_15cats-new.pth"
+def download_model():
+    url = "https://drive.google.com/uc?id=1ekEoDNm0gl2zuI7c4SjNQuhesIIrMpTz"
+    
+    model_path = "multimodal_model_15cats-new.pth"
+    
+    if not os.path.exists(model_path):
+        print("Downloading model from Google Drive...")
+        gdown.download(url, model_path, quiet=False)
+    else:
+        print("Model already exists.")
+    
+    return model_path
+
+model_path = download_model()
 num_classes = 15
 inception_model = inception_v3(pretrained=True)
 inception_model.fc = nn.Identity()
