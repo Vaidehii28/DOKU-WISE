@@ -3,6 +3,8 @@ import torch.nn as nn
 from transformers import BertTokenizer, BertModel
 from torchvision.models import inception_v3
 from transformers import BertTokenizer, BertModel, T5Tokenizer, T5ForConditionalGeneration
+import gdown
+import os
 
 # Multimodal classifier definition
 class MultimodalClassifier(nn.Module):
@@ -37,9 +39,22 @@ def get_t5_model():
     t5_model = T5ForConditionalGeneration.from_pretrained('t5_small-LATEST-CHANGES-400')
     return t5_model
 
+def download_model():
+    url = "https://drive.google.com/uc?id=1ekEoDNm0gl2zuI7c4SjNQuhesIIrMpTz"
+    
+    model_path = "multimodal_model_15cats-new.pth"
+    
+    if not os.path.exists(model_path):
+        print("Downloading model from Google Drive...")
+        gdown.download(url, model_path, quiet=False)
+    else:
+        print("Model already exists.")
+    
+    return model_path
+
 def get_multimodal_model():
     # Load multimodal model
-    model_path = "multimodal_model_15cats-new.pth"
+    model_path = download_model()
     num_classes = 15
     inception_model = inception_v3(pretrained=True)
     inception_model.fc = nn.Identity()
